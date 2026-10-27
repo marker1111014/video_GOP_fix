@@ -1,0 +1,196 @@
+========================================================================================
+  專業影音工作站風格 (Professional Studio / NLE Workbench UI) 介面設計提示詞與規範指南
+========================================================================================
+
+一、 此風格的正式行業名稱 (Style Designations)
+----------------------------------------------------------------------------------------
+在軟體與 UI/UX 設計領域中，這種風格有以下幾種權威通稱：
+1. 【主要名稱】：專業影音後製工作站風 (Professional NLE / Dark Studio Workbench UI)
+   - 代表經典軟體：DaVinci Resolve（達芬奇）、Adobe Premiere Pro、Blender 4、Reaper、Ableton Live。
+2. 【設計流派名稱】：直角現代實用主義 / 瑞士理性暗色風 (Modern Rectilinear Utility / Swiss Minimalist Dark)
+   - 核心哲學：承襲包浩斯（Bauhaus）「形隨機能 (Form Follows Function)」原則，零多餘裝飾、極致俐落。
+3. 【軟體工程名稱】：專業生產力與工控儀表板 (Technical Desktop & Console UI)
+   - 代表軟體：JetBrains IDE (Fleet / Dark Modern)、VS Code Dark Modern、Bloomberg Terminal。
+
+----------------------------------------------------------------------------------------
+二、 核心設計準則 (Golden Rules & Visual Principles)
+----------------------------------------------------------------------------------------
+若要重現或延續這種專業沉穩的高質感介面，必須嚴格遵守以下 5 大硬性準則：
+
+1. 【全直角禁令 (The 0px Radius Rule)】
+   - 規則：介面中所有元件（視窗、面板、按鈕、表格、進度條、輸入框、滑桿、選單、彈窗）的圓角半徑一律強制為 0px。
+   - 關鍵字：`border-radius: 0px !important;`、Sharp rectangular edges、No rounded corners。
+
+2. 【零 Emoji 與零花俏圖示 (Zero Emojis / Text Bracket Tags)】
+   - 規則：絕對不使用任何彩色 Emoji（如 🎬、🚀、🔥、🔴、⚙️ 等），避免玩具感或廉價感。
+   - 狀態標記方式：統一使用簡練的方括號等寬文字標籤或工業標準詞：
+     * 範例：`[就緒]`、`[分析中]`、`[已完成]`、`[失敗]`、`[高風險] 嚴重卡頓`、`[TS格式]`。
+
+3. 【霧面深炭灰色彩系統 (Matte Dark Charcoal Palette)】
+   - 規則：禁止高飽和彩色背景、禁止任何漸層色（No Gradients），統一採用高階霧面純色：
+     * 主背景底色 (App Background)    : `#181818` (沉穩霧面黑，極致抗長時間視覺疲勞)
+     * 面板/卡片底色 (Panel/Card)       : `#212121` ~ `#242424` (細微明度層次)
+     * 次級/抽屜底色 (Sub-Panel/Drawer): `#1c1c1c`
+     * 結構邊框分割線 (Hairline Border) : `1px solid #303030` ~ `#383838` (極細銳利實線)
+     * 主要文字 (Primary Text)          : `#d4d4d4` (柔和純淨白灰，對比舒適不刺眼)
+     * 次要說明文字 (Secondary Text)    : `#888888` ~ `#777777` (低彩度灰階)
+     * 主要聚焦動作鍵 (Primary Accent)  : `#0e639c` (專業工作站深冷藍，Studio Cobalt Blue)
+       - Hover: `#1177bb` ｜ Pressed: `#094770`
+     * 警示/風險狀態 (Warning / Danger) :
+       - 高風險/刪除鍵: 底色 `#2a1d1d`、邊框 `#5a2e2e`、文字 `#e07a7a` (低彩度深磚紅)
+       - 輕微延遲/警示: 底色 `#2a2418`、邊框 `#5a4820`、文字 `#fbbf24` (低彩度琥珀暗金)
+       - 正常/成功狀態: 底色 `#1c261e`、邊框 `#2a402d`、文字 `#4ade80` (低彩度冷杉綠)
+
+4. 【高資訊密度與結構網格 (High Density & Grid Layout)】
+   - 緊湊佈局：適當縮減內距 (padding) 與外距 (margin)，強化每平方公分的有效資訊量。
+   - 表格排版：1px 細網格線、交替微對比斑馬紋、緊湊表頭（粗體 11px~12px）。
+
+5. 【平坦矩形進度條與滑桿 (Flat Rectilinear Controls)】
+   - 進度條：純平矩形槽體（`#222222`）搭配純平色塊填滿（`#0e639c`），高度 8px~16px，無漸層無圓角。
+   - 滑桿：細扁矩形軌道（高 4px）+ 方形矩形滑塊（`12px x 16px`）。
+
+----------------------------------------------------------------------------------------
+三、 以後製作其他軟體時，直接發給 AI 的提示詞範本 (AI Master Prompts)
+----------------------------------------------------------------------------------------
+
+【繁體中文通用提示詞範本】（複製以下文字發給任何 AI 即可）：
+「
+請為我設計/開發此軟體的 GUI 介面，必須嚴格採用【專業影音後製工作站風格 (DaVinci Resolve / Premiere Pro 霧面深炭灰風格)】：
+1. 幾何形狀：全直角設計，所有視窗、卡片、面板、按鈕、表格、輸入框、滑桿、進度條的 border-radius 一律為 0px，嚴禁任何圓角。
+2. 配色系統：霧面深炭灰純色調，嚴禁彩色漸層與高彩度背景。
+   - 視窗底色: #181818
+   - 面板/卡片底色: #212121 (邊框: 1px solid #303030)
+   - 主文字: #d4d4d4，次要文字: #888888
+   - 核心執行鍵: 專業工作站深冷藍 #0e639c (懸停: #1177bb)
+   - 狀態標籤: 使用低彩度深磚紅 (#2a1d1d)、暗金 (#2a2418)、冷杉綠 (#1c261e)
+3. 文字規範：徹底移除所有 Emoji 圖示（如 🚀, 🎬, ⚙️ 等），保持純粹嚴謹的技術工具質感；狀態請用方括號文字表示（例如 [就緒]、[處理中]、[完成]、[錯誤]）。
+4. 控制元件：進度條與滑桿一律為純平矩形，無漸層、無陰影、無多餘留白。
+」
+
+----------------------------------------------------------------------------------------
+
+【英文最佳提示詞範本 (English Master Prompt)】（對國外大模型與程式碼生成效果最強）：
+"Design the user interface using a Professional NLE / Dark Studio Workbench theme (inspired by DaVinci Resolve and Adobe Premiere Pro):
+- Geometry: Strict 0px border-radius across ALL widgets, frames, buttons, tables, scrollbars, and progress bars. Absolutely NO rounded corners.
+- Color Palette: Matte dark charcoal scheme with zero gradients:
+  * Window Background: #181818
+  * Panels/Cards: #212121 with 1px solid #303030 border
+  * Text: Primary #d4d4d4, secondary #888888
+  * Primary Action: Studio Cobalt Blue #0e639c (hover: #1177bb, pressed: #094770)
+  * Status/Badges: Subdued low-saturation brick red (#2a1d1d / #e07a7a) for danger, amber (#2a2418 / #fbbf24) for warning, forest green (#1c261e / #4ade80) for success.
+- Typography: Zero emojis anywhere. Use monospace bracket tags (e.g., [READY], [PROCESSING], [FAILED], [PASS]) and concise industrial terminology.
+- Controls: High density, flat rectangular progress bars (no gradients), square slider handles, and compact table headers."
+
+----------------------------------------------------------------------------------------
+四、 隨取即用 QSS / CSS 樣式表核心模組 (Ready-to-use Stylesheet)
+----------------------------------------------------------------------------------------
+/* 主視窗底色 */
+QMainWindow {
+    background-color: #181818;
+}
+
+/* 全域字體與基礎色 */
+QWidget {
+    font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+    color: #cccccc;
+    font-size: 12px;
+}
+
+/* 面板卡片容器 (全 0px 方角) */
+QFrame, QGroupBox {
+    background-color: #212121;
+    border: 1px solid #303030;
+    border-radius: 0px;
+}
+
+/* 標準按鈕 */
+QPushButton {
+    background-color: #2b2b2b;
+    color: #d4d4d4;
+    border: 1px solid #3a3a3a;
+    border-radius: 0px;
+    padding: 5px 14px;
+    font-weight: 500;
+}
+QPushButton:hover {
+    background-color: #363636;
+    border-color: #4a4a4a;
+    color: #ffffff;
+}
+QPushButton:pressed {
+    background-color: #1f1f1f;
+}
+
+/* 核心動作執行按鈕 (工作站深冷藍) */
+QPushButton#BtnPrimary {
+    background-color: #0e639c;
+    color: #ffffff;
+    border: 1px solid #1177bb;
+    border-radius: 0px;
+    font-weight: bold;
+}
+QPushButton#BtnPrimary:hover {
+    background-color: #1177bb;
+    border-color: #2b88cc;
+}
+
+/* 表格 (高密度工作站風格) */
+QTableWidget {
+    background-color: #1a1a1a;
+    color: #dcdcdc;
+    gridline-color: #262626;
+    border: 1px solid #303030;
+    border-radius: 0px;
+    selection-background-color: #143550;
+    selection-color: #ffffff;
+}
+QHeaderView::section {
+    background-color: #242424;
+    color: #909090;
+    padding: 6px 8px;
+    border: 1px solid #1a1a1a;
+    font-weight: bold;
+    border-radius: 0px;
+}
+
+/* 進度條 (純平矩形無漸層) */
+QProgressBar {
+    background-color: #222222;
+    border: 1px solid #303030;
+    border-radius: 0px;
+    color: #ffffff;
+    text-align: center;
+}
+QProgressBar::chunk {
+    background-color: #0e639c;
+    border-radius: 0px;
+}
+
+/* 下拉選單 */
+QComboBox {
+    background-color: #242424;
+    color: #d4d4d4;
+    border: 1px solid #3a3a3a;
+    border-radius: 0px;
+    padding: 4px 8px;
+}
+
+/* 滑桿 (方形滑塊) */
+QSlider::groove:horizontal {
+    height: 4px;
+    background: #333333;
+    border-radius: 0px;
+}
+QSlider::sub-page:horizontal {
+    background: #0e639c;
+    border-radius: 0px;
+}
+QSlider::handle:horizontal {
+    background: #b0b0b0;
+    border: 1px solid #0e639c;
+    width: 12px;
+    margin-top: -6px;
+    margin-bottom: -6px;
+    border-radius: 0px;
+}
+========================================================================================

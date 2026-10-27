@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller / Build outputs
+build/
+dist/
+*.manifest
+*.spec.bak
+
+# Large Binaries and Release Archives (Managed via GitHub Releases)
+*.zip
+*.tar.gz
+*.7z
+影片卡頓檢測與極速修復大師_可攜版/
+VideoFixer_Portable_Project/bin/ffmpeg.exe
+bin/ffmpeg.exe
+
+# Temporary test and media files
+*.mp4
+*.ts
+*.mkv
+*.mov
+*.avi
+修復_零卡頓/
+
+# OS / Editor temporary files
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini
